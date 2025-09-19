@@ -10,7 +10,7 @@ android {
     defaultConfig {
         applicationId = "com.dietapplication"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -57,6 +57,8 @@ dependencies {
     implementation(libs.material3)
     implementation(libs.ui)
     implementation(libs.ui.tooling.preview)
+    implementation(libs.androidx.navigation.runtime.android)
+    implementation(libs.androidx.navigation.compose.android)
     debugImplementation(libs.ui.tooling)
 
 // Coroutines
