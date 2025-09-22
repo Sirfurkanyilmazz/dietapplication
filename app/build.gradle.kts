@@ -59,6 +59,7 @@ dependencies {
     implementation(libs.ui.tooling.preview)
     implementation(libs.androidx.navigation.runtime.android)
     implementation(libs.androidx.navigation.compose.android)
+    implementation(libs.androidx.webkit)
     debugImplementation(libs.ui.tooling)
 
 // Coroutines

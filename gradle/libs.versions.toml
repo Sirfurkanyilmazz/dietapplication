@@ -20,6 +20,7 @@ roomKtx = "2.8.0"
 workRuntimeKtx = "2.10.4"
 navigationRuntimeAndroid = "2.9.4"
 navigationComposeAndroid = "2.9.4"
+webkit = "1.14.0"
 
 [libraries]
 androidx-activity-compose-v192 = { module = "androidx.activity:activity-compose", version.ref = "activityComposeVersion" }
@@ -57,6 +58,7 @@ ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 androidx-navigation-runtime-android = { group = "androidx.navigation", name = "navigation-runtime-android", version.ref = "navigationRuntimeAndroid" }
 androidx-navigation-compose-android = { group = "androidx.navigation", name = "navigation-compose-android", version.ref = "navigationComposeAndroid" }
+androidx-webkit = { group = "androidx.webkit", name = "webkit", version.ref = "webkit" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
