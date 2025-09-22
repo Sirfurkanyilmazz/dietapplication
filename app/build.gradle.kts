@@ -88,5 +88,7 @@ dependencies {
 
 // Coil (görsel yükleme)
     implementation(libs.coil.compose)
+    implementation(libs.material.icons.extended)
 
 }
+

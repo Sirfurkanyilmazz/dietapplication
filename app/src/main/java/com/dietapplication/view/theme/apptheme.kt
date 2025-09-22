@@ -1,16 +1,17 @@
-package com.dietapplication.view.theme
+﻿package com.dietapplication.view.theme
 
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.material3.Shapes
+import androidx.compose.foundation.shape.RoundedCornerShape
 
 private val Mint = Color(0xFF00C2A8)
 private val MintDark = Color(0xFF00A38E)
 private val SurfaceDark = Color(0xFF101314)
-private val SurfaceVariantDark = Color(0xFF171A1B)
+private val SurfaceVar = Color(0xFF171A1B)
 
-private val DarkScheme = darkColorScheme(
+private val Dark = darkColorScheme(
     primary = Mint,
     onPrimary = Color.Black,
     primaryContainer = MintDark,
@@ -21,10 +22,12 @@ private val DarkScheme = darkColorScheme(
     onBackground = Color(0xFFE9F2F0),
     surface = SurfaceDark,
     onSurface = Color(0xFFE9F2F0),
-    surfaceVariant = SurfaceVariantDark
+    surfaceVariant = SurfaceVar,
+    onSurfaceVariant = Color(0xFFC9D7D4),
+    outline = Color(0xFF2B3132)
 )
 
-private val LightScheme = lightColorScheme(
+private val Light = lightColorScheme(
     primary = Color(0xFF0F9B8E),
     onPrimary = Color.White,
     primaryContainer = Color(0xFFBFEDE6),
@@ -34,17 +37,16 @@ private val LightScheme = lightColorScheme(
 )
 
 val AppShapes = Shapes(
-    extraSmall = androidx.compose.foundation.shape.RoundedCornerShape(10),
-    small = androidx.compose.foundation.shape.RoundedCornerShape(14),
-    medium = androidx.compose.foundation.shape.RoundedCornerShape(18),
-    large = androidx.compose.foundation.shape.RoundedCornerShape(22),
-    extraLarge = androidx.compose.foundation.shape.RoundedCornerShape(28)
+    small = RoundedCornerShape(14),
+    medium = RoundedCornerShape(18),
+    large = RoundedCornerShape(24),
+    extraLarge = RoundedCornerShape(28)
 )
 
 @Composable
 fun AppTheme(useDark: Boolean = true, content: @Composable () -> Unit) {
     MaterialTheme(
-        colorScheme = if (useDark) DarkScheme else LightScheme,
+        colorScheme = if (useDark) Dark else Light,
         shapes = AppShapes,
         typography = Typography(),
         content = content
